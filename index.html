@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julian Manzino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo" id="logo">
+          <a href="#"><img src="images/logo.png" alt="Logotipo" /></a>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="home">
+            <img src="images/home-img.png" alt="Home Image" class="home-img">
+          
+            <div class="text-home">
+              <h1>welcome to my web site</h1>
+              <p>small description</p>
+            </div>
+
+          </section>
+
+          <section class="description">
+            <h1>more elaborate description</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a ullamcorper laoreet, velit nisi venenatis nisl, vel aliquet lorem nisi et sapien.</p>
+          </section>
+
+          <section class="jobs">
+
+            <h1>other jobs</h1>
+
+            <div class="jobs-group">
+
+                <a href="">
+                  <div class="job-list"> 
+                    <h1>job 1</h1>
+                    <p>description</p>
+                    <img src="" alt="">
+                  </div>
+                </a>
+
+                <a href="">
+                  <div class="job-list">
+                    <h1>job 2</h1>
+                    <p>description</p>
+                    <img src="" alt="">
+                  </div>
+                </a>
+
+                <a href="">
+                  <div class="job-list">
+                    <h1>job 3</h1>
+                    <p>description</p>
+                    <img src="" alt="">
+                  </div>
+                </a>
+
+              </div>
+          </section>
+
+          <section class="contact">
+
+            <h1>My Contact</h1>
+            <p>contact...</p>
+            <div class="form">
+              <form action="/submit_form" method="post">
+
+                <label for="nombre">Name:</label>
+                <br>
+                <input type="text" id="nombre" name="name" required>
+                
+                <br>
+
+                <label for="email">Email:</label>
+                <br>
+                <input type="email" id="email" name="email" required>
+                
+                <br>
+
+                <label for="mensaje">Message:</label>
+                <br>
+                <textarea id="mensaje" name="Message" required></textarea>
+
+                <br>
+
+                <input type="submit" value="send">
+
+              </form>
+            </div>
+          </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Copyright © 2024 Web Page Designer</p>
+    </footer>
+
+</body>
+
+</html>

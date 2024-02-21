@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgb(28, 28, 28);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    margin-right: 60px;
+    font-size: 35px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+nav a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+header img {
+    height: 90px;
+    width: 90px;
+    align-items: center;
+}
+
+.home {
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    display: grid;
+}
+
+.home-img {
+    height: 750px;
+    width: 1250px;
+}
+
+.text-home{
+    position: absolute;
+    padding: 50px;
+    top: 10px;
+    text-align: center;
+    display: contents;
+}
+
+.description {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.jobs {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.jobs-group {
+    justify-content: space-around;
+    display: flex;
+    padding: 10px;
+}
+
+.jobs-group a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.jobs-group div {
+    background-color: rgb(92, 92, 92);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contact {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+
+}
+
+.contact div{
+    background-color: rgb(50, 50, 50);
+    width: 500px;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.form label {
+    align-items: center;
+    padding: 10px;
+}
+
+
+.form textarea {
+    width: 50%;
+    height: 150px;
+
+}
+
+.footer {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
