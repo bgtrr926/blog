@@ -1,119 +1,251 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #c29e72;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos del encabezado */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    background-color: rgb(28, 28, 28);
+    background-color: #401616;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
 }
 
 nav ul {
-    display: flex;
+    list-style: none;
 }
 
-nav li {
-    margin-right: 60px;
-    font-size: 35px;
-}
-
-ul li {
-    list-style-type: none;
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
 }
 
 nav a {
-    color: aliceblue;
     text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
 }
 
-header img {
-    height: 90px;
-    width: 90px;
-    align-items: center;
+/* Estilos de la sección principal */
+main {
+    padding: 20px;
 }
 
 .home {
-    align-items: center;
-    position: relative;
-    justify-content: center;
-    display: grid;
+    text-align: center;
 }
 
 .home-img {
-    height: 750px;
-    width: 1250px;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    max-height: 550px;
 }
 
-.text-home{
-    position: absolute;
-    padding: 50px;
-    top: 10px;
+.home-container {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.home-container.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.text-home {
+    margin-top: 20px;
     text-align: center;
-    display: contents;
+}
+
+.text-container {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra de la caja */
+    background-color: #fff; /* Fondo de la caja */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    display: flex; /* Utilizamos flex para que el contenedor tome el ancho completo */
+    flex-direction: column; /* Apilamos los elementos verticalmente */
+    justify-content: center; /* Centramos los elementos horizontalmente */
+    align-items: center; /* Centramos los elementos verticalmente */
+}
+
+.text-container h1 {
+    font-size: 36px; /* Tamaño del título */
+    color: #000000; /* Color del título */
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2); /* Sombra del texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.text-container p {
+    font-size: 18px; /* Tamaño del párrafo */
+    text-align: center;
+}
+
+
+.description, .jobs, .contact {
+    margin-top: 40px;
 }
 
 .description {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    margin-top: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade sombra a la caja */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    max-width: 700px; /* Ajusta el ancho máximo según tus necesidades */
+    margin-left: auto; /* Centra la caja en el contenedor */
+    margin-right: auto;
+    opacity: 0;
+    transform: translateY(40px); /* Desplazamiento inicial más hacia abajo */
+    transition: opacity 1s ease, transform 1s ease; /* Transición más lenta */
 }
 
-.jobs {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+.description.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.jobs-group {
-    justify-content: space-around;
+.description h1,
+.description p {
+    margin-bottom: 10px; /* Ajusta el espacio entre títulos y párrafos según tus necesidades */
+}
+
+.description-box {
+    opacity: 0;
+    transform: translateY(40px); /* Desplazamiento inicial más hacia abajo */
+    transition: opacity 1s ease, transform 1s ease; /* Transición más lenta */
+}
+
+.description-box.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilos de la sección de trabajos */
+
+.jobs h1 {
+    padding: 15px;
+}
+
+.job-list {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+
+.job-list:hover {
+    transform: scale(1.05);
+}
+
+.job-list img {
+    margin-left: 750px; /* Empuja la imagen hacia la derecha dentro de su contenedor */
+    display: block; /* Asegura que la imagen no afecte el diseño del resto del contenido */
+    width: 100px; /* Ajusta el tamaño de la imagen según tus necesidades */
+    height: auto;
+}
+
+/* Estilos del formulario de contacto */
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+form {
     display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    margin-top: 5px;
     padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
 }
 
-.jobs-group a {
-    text-decoration: none;
-    color: aliceblue;
+input[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.jobs-group div {
-    background-color: rgb(92, 92, 92);
-    padding: 10px;
-    border-radius: 10px;
+input[type="submit"]:hover {
+    background-color: #2186c4;
 }
 
-.contact {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: grid;
-
+input:focus,
+textarea:focus {
+    border-color: #3498db;
 }
 
-.contact div{
-    background-color: rgb(50, 50, 50);
-    width: 500px;
-    align-items: center;
-    padding: 10px;
-    border-radius: 10px;
-
+.form:hover {
+    transform: scale(1.05);
 }
-
-.form label {
-    align-items: center;
-    padding: 10px;
-}
-
-
-.form textarea {
-    width: 50%;
-    height: 150px;
-
-}
-
+/* Estilos del pie de página */
 .footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    justify-content: center;
-    align-items: center;
+    padding: 10px 0;
+}
+
+
+/*demas */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-out {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-out.inactive {
+    opacity: 0;
+    transform: translateY(40px);
 }

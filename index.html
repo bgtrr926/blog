@@ -17,10 +17,10 @@
 
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Jobs</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home" class="scroll-to-section">Home</a></li>
+            <li><a href="#description" class="scroll-to-section">About</a></li>
+            <li><a href="#jobs" class="scroll-to-section">Jobs</a></li>
+            <li><a href="#contact" class="scroll-to-section">Contact</a></li>
           </ul>
         </nav>
 
@@ -28,58 +28,66 @@
 
     <main>
 
-        <section class="home">
-            <img src="images/home-img.png" alt="Home Image" class="home-img">
-          
+        <section class="home" id="home">
+          <div class="home-container">
             <div class="text-home">
-              <h1>welcome to my web site</h1>
-              <p>small description</p>
+              <div class="text-container">
+                <h1>welcome to my web site</h1>
+                <p>Welcome to our creative digital realm, where we bring your ideas to life through captivating visual experiences. We specialize in assembling and designing websites, blending modern aesthetics with intuitive functionality. From sleek portfolios to interactive platforms, each project is unique and tailored to your needs. Let us elevate your online presence to the next level with a personalized and professional approach. Discover how we can transform your vision into a stunning digital reality.</p>
+              </div>
             </div>
 
+            <img src="images/home-img.png" alt="Home Image" class="home-img">
+          </div>
+        </section>
+
+          <section class="description fade-out" id="description">
+            <div class="description-box">
+              <h1>Crafting Unique Web Experiences Tailored to You</h1>
+              <p>Welcome to the dynamic digital realm curated by Julian Manzino, a systems engineering student with a fervent passion for programming and design! In my journey towards mastering the art of website assembly and design, I have always placed the needs of my clients at the forefront.</p>
+
+              <p>As a student of systems engineering, I merge my solid academic background with my enthusiasm for programming and design, crafting web experiences that are not only visually striking but also functionally intuitive.</p>
+                
+              <p>In my approach, customer satisfaction takes precedence. I recognize that each project is unique, so I strive to thoroughly understand your goals and vision. My commitment extends beyond the ordinary, leveraging my innate programming and design skills, and, when necessary, implementing artificial intelligence to refine outcomes and offer innovative solutions.</p>
+                
+              <p>  My aim is to comprehensively meet the needs of my clients. From the initial sketch to the final implementation, I endeavor to go above and beyond to provide you with a web experience that not only meets but exceeds your expectations. Join me on this thrilling digital journey and discover how we can transform your vision into an outstanding online presence. Your success is my priority!</p>
+            </div>
           </section>
 
-          <section class="description">
-            <h1>more elaborate description</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna a ullamcorper laoreet, velit nisi venenatis nisl, vel aliquet lorem nisi et sapien.</p>
-          </section>
-
-          <section class="jobs">
-
-            <h1>other jobs</h1>
-
+          <section class="jobs fade-out" id="jobs">
+            <h1>some jobs</h1>
+        
             <div class="jobs-group">
-
-                <a href="">
-                  <div class="job-list"> 
-                    <h1>job 1</h1>
-                    <p>description</p>
-                    <img src="" alt="">
-                  </div>
+        
+                <a href="link_al_job1">
+                    <div class="job-list"> 
+                        <h2>job 1</h2>
+                        <p>description</p>
+                        <img src="images/job1.jpg" alt="Job 1 Image">
+                    </div>
                 </a>
-
-                <a href="">
-                  <div class="job-list">
-                    <h1>job 2</h1>
-                    <p>description</p>
-                    <img src="" alt="">
-                  </div>
+        
+                <a href="link_al_job2">
+                    <div class="job-list">
+                        <h2>job 2</h2>
+                        <p>description</p>
+                        <img src="images/job2.jpg" alt="Job 2 Image">
+                    </div>
                 </a>
-
-                <a href="">
-                  <div class="job-list">
-                    <h1>job 3</h1>
-                    <p>description</p>
-                    <img src="" alt="">
-                  </div>
+        
+                <a href="link_al_job3">
+                    <div class="job-list">
+                        <h2>job 3</h2>
+                        <p>description</p>
+                        <img src="images/job3.jpg" alt="Job 3 Image">
+                    </div>
                 </a>
-
-              </div>
+        
+            </div>
           </section>
 
-          <section class="contact">
+          <section class="contact" id="contact">
 
-            <h1>My Contact</h1>
-            <p>contact...</p>
             <div class="form">
               <form action="/submit_form" method="post">
 
@@ -105,6 +113,12 @@
 
               </form>
             </div>
+
+            <div>
+              <h1>My Contact</h1>
+              <p>contact...</p>
+            </div>
+            
           </section>
 
     </main>
@@ -112,6 +126,8 @@
     <footer class="footer">
         <p>Copyright © 2024 Web Page Designer</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
